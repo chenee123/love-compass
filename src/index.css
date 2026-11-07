@@ -1,0 +1,66 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-cream: #fff4f8;
+  --color-blush: #ffe2ed;
+  --color-pink: #f6a9c8;
+  --color-rose: #e77fa9;
+  --color-plum: #8d536d;
+  --color-body: #594650;
+
+  --font-sans: 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei',
+    'Noto Sans SC', system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+  --shadow-soft: 0 8px 24px rgba(231, 127, 169, 0.12);
+  --shadow-card: 0 6px 20px rgba(141, 83, 109, 0.08);
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--color-cream);
+  color: var(--color-body);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: transparent;
+}
+
+#root {
+  min-height: 100svh;
+}
+
+/* 数字与进度使用等宽，避免跳动 */
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* 通用过渡 */
+.fade-in {
+  animation: fadeIn 0.4s ease both;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.slide-in {
+  animation: slideIn 0.35s ease both;
+}
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
