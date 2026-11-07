@@ -7,12 +7,6 @@ interface HomeProps {
   onResume: () => void
 }
 
-const FEATURES = [
-  { icon: '✏️', label: '20 道趣味题目' },
-  { icon: '⏱️', label: '约 3~5 分钟' },
-  { icon: '🎁', label: '完全免费' },
-]
-
 export function Home({ onStart, onAbout, hasProgress, onResume }: HomeProps) {
   return (
     <div className="relative min-h-screen flex flex-col overflow-hidden">
@@ -60,19 +54,6 @@ export function Home({ onStart, onAbout, hasProgress, onResume }: HomeProps) {
             <br />
             关系期待、个人优势与适配方向。
           </p>
-
-          {/* 特点 */}
-          <div className="flex justify-center gap-3 mb-8 flex-wrap">
-            {FEATURES.map((f) => (
-              <div
-                key={f.label}
-                className="flex items-center gap-1.5 rounded-full bg-white px-3 py-2 text-xs text-plum shadow-card"
-              >
-                <span>{f.icon}</span>
-                <span>{f.label}</span>
-              </div>
-            ))}
-          </div>
 
           <PillButton
             onClick={onStart}
