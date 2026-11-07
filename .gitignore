@@ -18,6 +18,9 @@ playwright-report
 blob-report
 playwright/.cache
 
+# WorkBuddy 工作记忆
+.workbuddy/
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
